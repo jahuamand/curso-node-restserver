@@ -112,9 +112,11 @@ const usuariosGet= async (req=request, res=response) => {
 
     const usuario = await Usuario.findByIdAndUpdate(id,{ estado : false}, {new: true});
 
+    //const usuarioAutenticado = req.usuario;
+
     res.json({            
         //msg:  'delete API'
-        usuario
+        usuario //,usuarioAutenticado//,uid
     });
   }
 
